@@ -1,0 +1,9 @@
+package encapsulation.class_problems;
+public class Problem3_NicknameTag {
+    static final class NameTag {
+        private final String firstName; private final String lastName;
+        NameTag(String fullName){String[] parts=fullName.split(" ");firstName=parts[0];lastName=parts[1];}
+        String getNickname(){return firstName+" "+lastName.charAt(0)+".";}
+    }
+    public static void main(String[] args){System.out.println(new NameTag("Maria Gomez").getNickname());}
+}
